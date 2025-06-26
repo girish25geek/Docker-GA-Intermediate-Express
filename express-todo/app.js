@@ -6,6 +6,10 @@ app.use(express.json());
 
 const todos = [];
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the TODO API. Use /todos');
+});
+
 app.get('/todos', (req, res) => {
   res.json(todos);
 });
